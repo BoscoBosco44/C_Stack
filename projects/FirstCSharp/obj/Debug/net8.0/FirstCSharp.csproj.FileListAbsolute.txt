@@ -1,0 +1,14 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\bin\Debug\net8.0\FirstCSharp.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\bin\Debug\net8.0\FirstCSharp.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\bin\Debug\net8.0\FirstCSharp.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\bin\Debug\net8.0\FirstCSharp.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\bin\Debug\net8.0\FirstCSharp.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\refint\FirstCSharp.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\FirstCSharp.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\FirstCSharp\obj\Debug\net8.0\ref\FirstCSharp.dll

@@ -1,0 +1,14 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\bin\Debug\net8.0\HelloDotnet.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\bin\Debug\net8.0\HelloDotnet.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\bin\Debug\net8.0\HelloDotnet.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\bin\Debug\net8.0\HelloDotnet.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\bin\Debug\net8.0\HelloDotnet.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\refint\HelloDotnet.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\ref\HelloDotnet.dll
