@@ -1,0 +1,15 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\bin\Debug\net8.0\fundaentals2.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\bin\Debug\net8.0\fundaentals2.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\bin\Debug\net8.0\fundaentals2.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\bin\Debug\net8.0\fundaentals2.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\bin\Debug\net8.0\fundaentals2.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.sourcelink.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\refint\fundaentals2.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\fundaentals2.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundaentals2\obj\Debug\net8.0\ref\fundaentals2.dll

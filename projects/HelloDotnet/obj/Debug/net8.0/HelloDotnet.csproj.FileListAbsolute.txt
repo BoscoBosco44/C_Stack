@@ -12,3 +12,4 @@ C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Deb
 C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.pdb
 C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.genruntimeconfig.cache
 C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\ref\HelloDotnet.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\HelloDotnet\obj\Debug\net8.0\HelloDotnet.sourcelink.json
