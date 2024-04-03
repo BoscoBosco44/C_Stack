@@ -1,0 +1,15 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.sourcelink.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\bin\Debug\net8.0\RideMaker.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\bin\Debug\net8.0\RideMaker.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\bin\Debug\net8.0\RideMaker.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\bin\Debug\net8.0\RideMaker.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\bin\Debug\net8.0\RideMaker.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\refint\RideMaker.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\RideMaker.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\RideMaker\obj\Debug\net8.0\ref\RideMaker.dll

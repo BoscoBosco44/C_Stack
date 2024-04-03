@@ -1,0 +1,15 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\bin\Debug\net8.0\fundamentalls3.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\bin\Debug\net8.0\fundamentalls3.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\bin\Debug\net8.0\fundamentalls3.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\bin\Debug\net8.0\fundamentalls3.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\bin\Debug\net8.0\fundamentalls3.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.sourcelink.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\refint\fundamentalls3.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\fundamentalls3.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\fundamentalls3\obj\Debug\net8.0\ref\fundamentalls3.dll
