@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "pWKhahAVFBM1Zoz6fzG9UmRAI/2MT7Yo1lxsP6RrARY=",
+  "Source": "Portfolio1",
+  "BasePath": "_content/Portfolio1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Portfolio1\\wwwroot",
+      "Source": "Portfolio1",
+      "ContentRoot": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\MvcProjects\\Portfolio1\\wwwroot\\",
+      "BasePath": "_content/Portfolio1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\MvcProjects\\Portfolio1\\wwwroot\\css\\styling.css",
+      "SourceId": "Portfolio1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\MvcProjects\\Portfolio1\\wwwroot\\",
+      "BasePath": "_content/Portfolio1",
+      "RelativePath": "css/styling.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styling.css"
+    }
+  ]
+}

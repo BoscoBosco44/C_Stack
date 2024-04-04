@@ -1,0 +1,15 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\bin\Debug\net8.0\gameDev1.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\bin\Debug\net8.0\gameDev1.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\bin\Debug\net8.0\gameDev1.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\bin\Debug\net8.0\gameDev1.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\bin\Debug\net8.0\gameDev1.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.sourcelink.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\refint\gameDev1.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\gameDev1.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\gameDev1\obj\Debug\net8.0\ref\gameDev1.dll

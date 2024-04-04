@@ -1,0 +1,39 @@
+﻿
+
+
+<div class="inputDiv">
+    <div>
+        <p>Name:</p>
+        <p>Dojo Location:</p>
+        <p>Favarite Language: </p>
+        <p>Comment: </p>
+    </div>
+
+    <div class="flexStart">
+            @{
+                if(ViewBag.name != null) 
+                    {
+                        <p>@ViewBag.name</p>
+                    }
+                
+                else
+                    { <p>No Name</p> }
+            }
+        <p>@ViewBag.Location</p>
+        <p>@ViewBag.fl</p>
+        @{
+            
+            if(ViewBag.c != null) 
+                {
+                    <p>@ViewBag.c</p>
+                }
+            
+            else
+                { <p>No Comment</p> }
+            }
+    </div>
+    
+</div>
+
+<br>
+<a href="/" class="button-19">Go Back</a>
