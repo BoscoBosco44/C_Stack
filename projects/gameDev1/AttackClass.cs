@@ -2,9 +2,9 @@
 //damageAmount
 //constructor: specify ^ on creation
 
-class Attack {
+public class Attack {
     public string Name;
-    int damageAmount;
+    public int damageAmount;
 
     public Attack(string name, int da) {
         Name = name;

@@ -24,19 +24,49 @@ public class HomeController : Controller
     }
 
     [HttpPost("Process")]
-    public IActionResult Process(string Name, string Location, string fl, string c)
+    public IActionResult Process(string Name, string Location, string FavLang, string Comment)
     {
-        Console.WriteLine(Name);
-        Console.WriteLine(Location);
-        Console.WriteLine(fl);
-        Console.WriteLine(c);
+        Survey newSurvey = new Survey()
+        {
+            Name = Name,
+            Location = Location,
+            FavLang = FavLang,
+            Comment = Comment
+        };
 
-        ViewBag.name = Name;
-        ViewBag.Location = Location;
-        ViewBag.fl = fl;
-        ViewBag.c = c;
+        if(ModelState.IsValid) {
+        // if(1 == 1) {
+            return View("Results", newSurvey);
+        }
+        else {
+            Console.WriteLine(newSurvey.Name);
+            Console.WriteLine(newSurvey.Location);
+            Console.WriteLine(newSurvey.FavLang);
+            return View("Index");
+        }
 
-        return View("Results");
+
+
+
+        // Survey newSurvey = new Survey()
+        // {
+        //     Name = Name,
+        //     Location = Location,
+        //     FavLang = fl,
+        //     Comment = c
+        // };
+
+        // Console.WriteLine(Name);
+        // Console.WriteLine(Location);
+        // Console.WriteLine(fl);
+        // Console.WriteLine(c);
+
+        // ViewBag.name = Name;
+        // ViewBag.Location = Location;
+        // ViewBag.fl = fl;
+        // ViewBag.c = c;
+
+        // return View("Results");
     }
 
     [HttpGet("GoHome")]

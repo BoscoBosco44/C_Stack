@@ -1,4 +1,4 @@
-﻿
+﻿@model Survey
 
 
 <div class="inputDiv">
@@ -9,7 +9,36 @@
         <p>Comment: </p>
     </div>
 
+
     <div class="flexStart">
+            @{
+                if(Model.Name != null) 
+                    {
+                        <p>@Model.Name</p>
+                    }
+                
+                else
+                    { <p>No Name</p> }
+            }
+        <p>@Model.Location</p>
+        <p>@Model.FavLang</p>
+        @{
+            
+            if(Model.Comment != null) 
+                {
+                    <p>@Model.Comment</p>
+                }
+            
+            else
+                { <p>No Comment</p> }
+            }
+    </div>
+
+
+
+
+
+    @* <div class="flexStart">
             @{
                 if(ViewBag.name != null) 
                     {
@@ -31,7 +60,7 @@
             else
                 { <p>No Comment</p> }
             }
-    </div>
+    </div> *@
     
 </div>
 

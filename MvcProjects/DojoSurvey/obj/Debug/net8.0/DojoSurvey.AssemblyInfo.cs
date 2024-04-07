@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DojoSurvey")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abac078ca10717afca17aa8e2c174f0bc9a9ae53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa96092771d6550309cea1512db2ee3660122f9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DojoSurvey")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DojoSurvey")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

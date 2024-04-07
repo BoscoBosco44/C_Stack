@@ -1,16 +1,18 @@
-﻿
+﻿@model Survey
 
 <div>
-    <form action="Process" method="post">
+    <form asp-action="Process" asp-controller="Home" method="post">
         <div>
             <div class="inputDiv">
-                <p>Your Name:</p>
-                <input type="text" name="Name">
+                <label asp-for="Name">Your Name:</label>
+                <span asp-validation-for="Name"></span>
+                <input asp-for="Name">
             </div>
 
             <div class="inputDiv">
-                <p>Dojo Location:</p>
-                <select name="Location" id="">
+                <label asp-for="Location">Dojo Location</label>
+                <span asp-validation-for="Location"></span>
+                <select asp-for="Location">
                     <option value="Chicago">Chicago</option>
                     <option value="Moon">Moon</option>
                     <option value="Online">Online</option>
@@ -18,8 +20,9 @@
             </div>
 
             <div class="inputDiv">
-                <p>Favrite Language:</p>
-                <select name="fl" id="">
+                <label asp-for="FavLang">Favrite Language:</label>
+                <span asp-validation-for="FavLang"></span>
+                <select asp-for="FavLang">
                     <option value="C#">C#</option>
                     <option value="C#">C#</option>
                     <option value="OR C#">OR C#</option>
@@ -28,8 +31,9 @@
         </div>
 
         <div class="inputDiv">
-            <p>Comments (optional):</p>
-            <textarea name="c" id="" cols="60" rows="5"></textarea>
+            <label asp-for="Comment">Comments (optional):</label>
+            <span asp-validation-for="Comment"></span>
+            <textarea asp-for="Comment" cols="60" rows="5"></textarea>
         </div>
 
         <button class="button-19" type="submit">Submit</button>

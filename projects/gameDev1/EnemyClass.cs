@@ -2,10 +2,10 @@
 //constructor: need name, health = 100
 //methods: randomAttack
 
-class Enemy {
-    string Name;
-    int health;
-    List<Attack> AttackList;
+public abstract class Enemy {
+    public string Name;
+    public int health;
+    public List<Attack> AttackList;
 
     public Enemy(string name) {
         Name = name;
@@ -21,7 +21,13 @@ class Enemy {
             return $"{Name} has no attacks";
     }
 
-    public void addAttack(Attack name) {
+    public void AddAttack(Attack name) {
         AttackList.Add(name);
+    }
+
+    public void PreformAttack(Enemy Target, Attack ChosenAttack)
+    {
+        Target.health = Target.health - ChosenAttack.damageAmount;
+        Console.WriteLine($"{Name} attacks {Target.Name}, dealing {ChosenAttack.damageAmount} damage and reducing {Target.Name}'s health to {Target.health}!!");
     }
 }
