@@ -1,0 +1,17 @@
+﻿@model List<int>
+
+<div class="text-center">
+    <h1>Here are the numbers Hurley:</h1>
+    @{
+        List<int> nums = Model;
+        Console.WriteLine(nums);
+
+        for(int i = 0; i < nums.Count; i++) {
+            <p>@nums[i]</p>
+        }
+
+        @* nums.ForEach(delegate(int num) {
+            <p>
+        }) *@
+    }
+</div>

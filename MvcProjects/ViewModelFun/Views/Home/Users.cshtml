@@ -1,0 +1,15 @@
+@model List<User>
+
+
+<div class="text-center">
+    <h1>Here are some Users:</h1>
+
+    @{
+        List<User> usrs = Model;
+        for(int i = 0; i < usrs.Count; i++) {
+            <p>@usrs[i].FirstName @usrs[i].LastName</p>
+        }
+    }
+
+
+</div>
