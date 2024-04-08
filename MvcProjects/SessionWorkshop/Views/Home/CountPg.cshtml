@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Http
+<h1>@Context.Session.GetString("UserName")</h1>
+
+
+@{
+    #pragma warning disable CS8629
+    int? numVar = Context.Session.GetInt32("num");
+    numVar = (int)numVar;
+
+    void print() {
+        Console.WriteLine("printing");
+    }
+}
+
+
+<div class="center">
+    <h2>@Context.Session.GetInt32("num")</h2>
+
+    <form action="AddOne" method="post">
+        <input type="submit" class="button-19" value="+1">
+    </form>
+
+    <form action="SubOne" method="post">
+        <input type="submit" class="button-19" value="-1">
+    </form>
+
+    <form action="X2" method="post">
+        <input type="submit" class="button-19" value="x 2">
+    </form>
+
+    <form action="AddRand" method="post">
+        <input type="submit" class="button-19" value="+ Random">
+    </form>
+
+
+
+</div>
