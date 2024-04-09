@@ -1,9 +1,28 @@
 #pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
 namespace DojoSurvey.Models;
+
+
+    public class LongerThan20Attribute : ValidationAttribute
+{
+    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    {
+        if (value != null && ((string)value).Length < 20)
+        {
+            return new ValidationResult("Comment must be longer than 20");
+        } else {
+            return ValidationResult.Success;
+        }
+    }
+}
+
+
+
+
 public class Survey
 {
-    public string Comment {get;set;} = default!;
+    [MinLength(20, ErrorMessage = "Must be longer than 20")]
+    public string? Comment {get;set;}
     
     [Required]
     [MinLength(2, ErrorMessage ="Name must be at least 2")]
@@ -32,21 +51,6 @@ public class Survey
     //             return ValidationResult.Success;
     //     }
     // }
-
-    public class LongerThan20Attribute : ValidationAttribute
-{
-    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
-    {
-        if (value != null && ((string)value).Length < 20)
-        {
-            return new ValidationResult("Custom error message");
-        } else {
-            return ValidationResult.Success;
-        }
-    }
-}
-
-
 
 
 }

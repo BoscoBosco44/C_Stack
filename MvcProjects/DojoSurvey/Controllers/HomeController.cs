@@ -24,16 +24,8 @@ public class HomeController : Controller
     }
 
     [HttpPost("Process")]
-    public IActionResult Process(string Name, string Location, string FavLang, string Comment)
+    public IActionResult Process(Survey newSurvey)
     {
-        Survey newSurvey = new Survey()
-        {
-            Name = Name,
-            Location = Location,
-            FavLang = FavLang,
-            Comment = Comment
-        };
-
         if(ModelState.IsValid) {
         // if(1 == 1) {
             return View("Results", newSurvey);
