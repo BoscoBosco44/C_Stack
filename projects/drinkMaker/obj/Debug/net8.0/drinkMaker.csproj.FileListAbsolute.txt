@@ -1,0 +1,15 @@
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\bin\Debug\net8.0\drinkMaker.exe
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\bin\Debug\net8.0\drinkMaker.deps.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\bin\Debug\net8.0\drinkMaker.runtimeconfig.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\bin\Debug\net8.0\drinkMaker.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\bin\Debug\net8.0\drinkMaker.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.AssemblyInfoInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.AssemblyInfo.cs
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.csproj.CoreCompileInputs.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.sourcelink.json
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\refint\drinkMaker.dll
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.pdb
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\drinkMaker.genruntimeconfig.cache
+C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\projects\drinkMaker\obj\Debug\net8.0\ref\drinkMaker.dll
