@@ -1,7 +1,22 @@
+using Microsoft.EntityFrameworkCore;
+using EnitityFrameworkSetup.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Create a variable to hold your connection string
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+// All your builder.services go here
+// And we will add one more service
+// Make sure this is BEFORE var app = builder.Build()!!
+builder.Services.AddDbContext<MyContext>(options =>
+{
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
+
 
 var app = builder.Build();
 
