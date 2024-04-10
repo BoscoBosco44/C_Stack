@@ -20,9 +20,50 @@ public class HomeController : Controller
     }         
     [HttpGet("")]    
     public IActionResult Index()    
-    {     
-        // Now any time we want to access our database we use _context   
-        List<Monster> AllMonsters = _context.Monsters.ToList();
-        return View();    
-    } 
+    {        
+        // Get all Monsters
+        ViewBag.AllMonsters = _context.Monsters.ToList();             
+        
+        // Get Monsters with the Name "Mike"
+        ViewBag.AllMikes = _context.Monsters.Where(n => n.Name == "Mike");     	
+        
+        // Get the 5 most recently added Monsters        
+        ViewBag.MostRecent = _context.Monsters.OrderByDescending(u => u.CreatedAt).Take(5).ToList(); 	
+        
+        // Get one Monster who has a certain description
+        ViewBag.MatchedDesc = _context.Monsters.FirstOrDefault(u => u.Description == "Super scary");
+        return View();  
+    }
+
+
+    // Inside HomeController
+    [HttpPost("monsters/create")]
+    public IActionResult CreateMonster(Monster newMon)
+    {    
+        if(ModelState.IsValid)
+        {
+            // We can take the Monster object created from a form submission
+            // and pass the object through the .Add() method  
+            // Remember that _context is our database  
+            _context.Add(newMon);    
+            // OR _context.Monsters.Add(newMon); if we want to specify the table
+            // EF Core will be able to figure out which table you meant based on the model  
+            // VERY IMPORTANT: save your changes at the end! 
+            _context.SaveChanges();
+            return RedirectToAction("SomeAction");
+        } else {
+            return View("Index");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
