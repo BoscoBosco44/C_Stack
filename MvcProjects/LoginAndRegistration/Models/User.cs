@@ -23,6 +23,7 @@ public class User
     public string Password {get; set;}
 
     [NotMapped]
+    [Compare("Password")] //build-in attribute for comparing two class feilds
     public string ConfirmPassword {get; set;}
 
 
