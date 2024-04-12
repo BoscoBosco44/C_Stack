@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Update a Dish!";
+}
+@model Dish
+
+    <form class="main" asp-action="UpdateDish" asp-controller="Home" asp-route-DishId="@Model.DishId" method="post">
+        <div class="left-main3">
+
+            <div class="inputDiv">
+                <label asp-for="Chef">Chef's Name:</label>
+                <input asp-for="Chef">
+                <div>
+                    <span asp-validation-for="Description"></span>
+                </div>
+            </div>
+            
+            <div class="inputDiv">
+                <label asp-for="Name">Dish's Name:</label>
+                <input asp-for="Name">
+                <div>
+                    <span asp-validation-for="Description"></span>
+                </div>
+            </div>
+
+            <div class="inputDiv">
+                <label asp-for="Calories">Number of Calories:</label>
+                <input asp-for="Calories">
+                <div>
+                    <span asp-validation-for="Description"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="center-main3">
+            <label asp-for="Tastiness">Tastiness:</label>
+            <select asp-for="Tastiness">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+
+                @* @{
+                    int i = 0;
+                    while(i <= 5) {
+                        <option value="@i">@i</option>
+                        i++;
+                    }
+                } *@
+            </select>
+            <div>
+                <span asp-validation-for="Tastiness"></span>
+            </div>
+            <br>
+            <input type="submit" class="btn-primary" value="Update Dish" >
+        </div>
+
+        <div class="right-main3">
+            <label asp-for="Description">Description:</label>
+            <textarea asp-for="Description" rows="6"></textarea>
+            <div>
+                <span asp-validation-for="Description"></span>
+            </div>
+        </div>
+
+
+    </form>

@@ -1,0 +1,38 @@
+
+@{
+    ViewData["Title"] = ViewBag.ThisDish.Name;
+}
+
+    <div class="recentDishesBox">
+        <h3>@ViewBag.ThisDish.Name by @ViewBag.ThisDish.Chef</h3>
+        <div class="line-h"></div>
+
+        <div class="tableBox">
+            <h2>@ViewBag.ThisDish.Description</h2>
+            <br>
+            <h4>Calories: @ViewBag.ThisDish.Calories</h4>
+            <h4>Tastiness: @ViewBag.ThisDish.Tastiness</h4>
+        </div>
+
+        <div class="flex">
+            <form asp-action="DeleteDish" asp-route-DishId="@ViewBag.ThisDish.DishId" method="post">
+                <input type="submit" class="button-19" value="Delete">
+            </form>
+
+            @* <a class="button-19" asp-action="DeleteDish" asp-route-DishId="@ViewBag.ThisDish.DishId">Delete</a> *@
+            <a class="button-19" asp-action="EditDish" asp-route-DishId="@ViewBag.ThisDish.DishId">Edit</a>
+        </div>
+
+
+                        @* <td><a asp-action="EditDish" asp-route-DishId="@d.DishId">@d.Name</a> by @d.Chef</td> *@
+
+
+    </div>
+
+
+
+
+
+
+
+

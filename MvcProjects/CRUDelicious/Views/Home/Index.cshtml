@@ -8,21 +8,11 @@
 
         <div class="tableBox">
             <table>
-                <tr>
-                    <td>Tosty Burger by Bobby Broil</td>
-                </tr>
-                <tr>
-                    <td>Tosty Burger by Bobby Broil</td>
-                </tr>
-                <tr>
-                    <td>Tosty Burger by Bobby Broil</td>
-                </tr>
-                <tr>
-                    <td>Tosty Burger by Bobby Broil</td>
-                </tr>
-                <tr>
-                    <td>Tosty Burger by Bobby Broil</td>
-                </tr>
+                @foreach(Dish d in ViewBag.AllDishes) {
+                    <tr>
+                        <td><a asp-action="ViewDish" asp-route-DishId="@d.DishId">@d.Name</a> by @d.Chef</td>
+                    </tr>
+                }
             </table>
         </div>
 
