@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using LoginAndRegistration.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace LoginAndRegistration.Controllers;
 
@@ -23,7 +24,7 @@ public class UserController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Success()
     {
         return View();
     }
@@ -31,14 +32,64 @@ public class UserController : Controller
 
 //------------------------------- CRUD routes ------------------------------------
 
-    // [HttpPost("newUser/create")]
-    // public IActionResult RegisterUser(User newUser)
-    // {
-    //     if(ModelState.IsValid) {
-    //         Console.WriteLine("New Use Valid: adding users");
+    [HttpPost("users/create")]
+    public IActionResult RegisterUser(User newUser)
+    {
+        if(ModelState.IsValid) {
+            Console.WriteLine("New Use Valid: adding users");
+
+            PasswordHasher<User> hasher = new();
+            newUser.Password = hasher.HashPassword(newUser, newUser.Password); //overrideing newUser's password with a hashed vertion
+            _context.Add(newUser);
+            _context.SaveChanges();
             
-    //     }
-    // }
+            HttpContext.Session.SetInt32("UserId", newUser.UserId); //"loggin in" users
+
+            return RedirectToAction("Success");
+        }
+        else
+            return View("Index");
+
+    }
+
+
+
+//--------- Read? ------
+
+    [HttpPost("users/success")]
+    public IActionResult LoginUser(LogUser user)
+    {
+        if(ModelState.IsValid) {
+            Console.WriteLine("Login user valid");
+
+            User? userInDb = _context.Users.SingleOrDefault(i => i.Email == user.LogEmail);
+
+            if(userInDb == null) {
+                ModelState.AddModelError("Email", "Invalid Email / Passwordddddd");
+                return View("Index");
+            }
+
+            PasswordHasher<LogUser> hasher = new PasswordHasher<LogUser>(); //initialise hasher obj
+
+            var result = hasher.VerifyHashedPassword(user, userInDb.Password, user.LogPassword); //why var?
+
+            if(result == 0) {
+                ModelState.AddModelError("Email", "Lies Lies Lies");
+                return View("Index");
+            }
+            else {
+                HttpContext.Session.SetInt32("UserId", userInDb.UserId);
+                ViewBag.UserId = HttpContext.Session.GetInt32("UserId");
+                return RedirectToAction("Success");
+            }
+
+
+        } 
+        else {
+            Console.WriteLine("LogUser invalid");
+            return View("Index");
+        }
+    }
 
 
 

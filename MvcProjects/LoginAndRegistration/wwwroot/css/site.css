@@ -36,7 +36,7 @@ span {
 .flex {
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   padding: 5px;
 }
 
@@ -67,7 +67,7 @@ text-decoration: none;}
 
 .line-h {
   border: solid black 1px;
-  width: 40em;
+  width: 30em;
   margin-bottom: 1em;
 }
 
@@ -234,13 +234,13 @@ tr:nth-child(even) {
 /* --------- 2 Vertical Boxes body layout -------- */
 .left-main2 {
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
 }
 
 .right-main2 {
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
 }
 
