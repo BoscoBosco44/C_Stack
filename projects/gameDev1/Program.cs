@@ -14,4 +14,3 @@ Enemy MeleeMan = new Melee();
 Enemy SniperSam = new Ranged();
 Enemy MagicMaster = new Magic();
 
-MeleeMan.PreformAttack(SniperSam, MeleeMan.AttackList{Kick});
