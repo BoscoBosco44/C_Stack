@@ -54,7 +54,16 @@ public class UserController : Controller
 
 
 
-//--------- Read? ------
+//---------------
+
+    [HttpPost("logout")]
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return View("Index");
+    }
+
+//---------------
 
     [HttpPost("users/success")]
     public IActionResult LoginUser(LogUser user)
