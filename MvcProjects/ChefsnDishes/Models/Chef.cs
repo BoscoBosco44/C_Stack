@@ -6,13 +6,21 @@ namespace ChefsnDishes.Models;
 
 public class Chef 
 {
+    [Key]
+    public int ChefId {get; set;}
+
     [Required(ErrorMessage = "put something here plz")]
     public string FirstName {get; set;}
 
     [Required(ErrorMessage = "put something here plz")]
     public string LastName {get; set;}
-    
+
     [Required(ErrorMessage = "put something here plz")]
     public string DOB {get; set;}
+
+
+    public DateTime CreatedAt {get; set;} = DateTime.Now;
+    public DateTime UpdatedAt {get; set;} = DateTime.Now;
+    public List<Dish> ChefsDishes {get; set;} = new List<Dish>(); // track MANY dishes a chef has made
 
 }
