@@ -12,13 +12,18 @@
         <table>
             <tr>
                 <th>Name</th>
-                <th>Age</th>
-                <th># of Dishes</th>
+                <th>Chef</th>
+                <th>Tastiness</th>
+                <th>Calories</th>
             </tr>
 
             @{
                 foreach(Dish c in Model) {
                     <tr>
+                        <td>@c.Name</td>
+                        <td>@c.Creator.FirstName @c.Creator.LastName</td>
+                        <td>@c.Tastiness</td>
+                        <td>@c.Calories</td>
                         @* <td>@c.FirstName</td>
                         <td>@c.LastName</td>
                         <td>@c.DOB</td> *@

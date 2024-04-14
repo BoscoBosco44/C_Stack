@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChefsnDishes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d99398dbc642e08669310a1496bb1653042d131")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aba1e50d4875167719f79cdede7507b7d11f985")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChefsnDishes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChefsnDishes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

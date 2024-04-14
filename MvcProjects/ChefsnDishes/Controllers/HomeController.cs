@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ChefsnDishes.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChefsnDishes.Controllers;
 
@@ -8,13 +9,13 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private ChefContext _context;
-    private DishContext _contextD;
+    // private DishContext _contextD;
 
-    public HomeController(ILogger<HomeController> logger, ChefContext context, DishContext contextD)
+    public HomeController(ILogger<HomeController> logger, ChefContext context)  //DishContext contextD
     {
         _logger = logger;
         _context = context;
-        _contextD = contextD;
+        // _contextD = contextD;
     }
 
 //------------------------------- view routes ------------------------------------
@@ -28,7 +29,7 @@ public class HomeController : Controller
 
     public IActionResult Dishes()
     {
-        List<Dish> allDishes = _contextD.Dishes.ToList(); 
+        List<Dish> allDishes = _context.Dishes.Include(c => c.Creator).ToList(); 
         return View("Dishes", allDishes);
     }
 
@@ -51,6 +52,8 @@ public class HomeController : Controller
     {
         if(ModelState.IsValid) {
             Console.WriteLine("newChef is valid");
+            Console.WriteLine(newChef.ChefId);
+            Console.WriteLine(newChef.ChefId);
 
             _context.Add(newChef);
             _context.SaveChanges();
@@ -59,7 +62,29 @@ public class HomeController : Controller
         }
         else {
             Console.WriteLine("newChef is invalid");
+            Console.WriteLine(newChef.ChefId);
+            Console.WriteLine(newChef.ChefId);
+
+            
             return View("AddAChef");
+        }
+    }
+
+
+    [HttpPost("dish/create")]
+    public IActionResult CreateDish(Dish newDish)
+    {
+        if(ModelState.IsValid) {
+            Console.WriteLine("newDish is Valid");
+
+            _context.Add(newDish);
+            _context.SaveChanges();
+
+            return RedirectToAction("Chefs");
+        }
+        else {
+            Console.WriteLine("newDish is invalid");
+            return View("AddDish");
         }
     }
 

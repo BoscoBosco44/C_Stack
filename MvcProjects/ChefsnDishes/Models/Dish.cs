@@ -8,13 +8,21 @@ public class Dish
 {
     [Key]
     public int DishId {get; set;}
+
+    [Required(ErrorMessage = "put something here plz")]
     public string Name {get; set;}
+
+    [Required(ErrorMessage = "put something here plz")]
     public int Calories {get; set;}
+
+    [Required(ErrorMessage = "put something here plz")]
     public int Tastiness {get; set;}
 
     public DateTime CreatedAt {get; set;} = DateTime.Now;
     public DateTime UpdatedAt {get; set;} = DateTime.Now;
 
+    //forgein key
+    public int ChefId {get; set;}
 
     //Navigation property:
     public Chef? Creator {get; set;}

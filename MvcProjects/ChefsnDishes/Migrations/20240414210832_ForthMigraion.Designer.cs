@@ -3,6 +3,7 @@ using System;
 using ChefsnDishes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChefsnDishes.Migrations
 {
     [DbContext(typeof(ChefContext))]
-    partial class ChefContextModelSnapshot : ModelSnapshot
+    [Migration("20240414210832_ForthMigraion")]
+    partial class ForthMigraion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

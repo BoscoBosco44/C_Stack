@@ -18,9 +18,11 @@ public class Chef
     [Required(ErrorMessage = "put something here plz")]
     public string DOB {get; set;}
 
+    //nav prop
+    public List<Dish> ChefsDishes {get; set;} = new List<Dish>(); // track MANY dishes a chef has made
 
     public DateTime CreatedAt {get; set;} = DateTime.Now;
     public DateTime UpdatedAt {get; set;} = DateTime.Now;
-    public List<Dish> ChefsDishes {get; set;} = new List<Dish>(); // track MANY dishes a chef has made
+
 
 }
