@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 namespace ProductsAndCategories;
 
 
-public class TheContext : DbContext
+public class OneContext : DbContext
 {
-    public TheContext(DbContextOptions options) : base(options) { }
+    public OneContext(DbContextOptions options) : base(options) { }
 
     public DbSet<Product> Products {get; set;}
     public DbSet<Category> Categories {get; set;}

@@ -68,7 +68,7 @@ public class HomeController : Controller
             
             return View("AddAChef");
         }
-    }
+    }// do you have to re run migrations after changing validations????????
 
 
     [HttpPost("dish/create")]

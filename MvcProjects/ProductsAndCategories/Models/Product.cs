@@ -1,5 +1,6 @@
 #pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ProductsAndCategories.Models;
 

@@ -7,10 +7,12 @@ namespace ProductsAndCategories.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private OneContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, OneContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
