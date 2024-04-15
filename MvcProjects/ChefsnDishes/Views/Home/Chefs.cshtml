@@ -19,9 +19,9 @@
             @{
                 foreach(Chef c in Model) {
                     <tr>
-                        <td>@c.FirstName</td>
-                        <td>@c.LastName</td>
-                        <td>@c.DOB</td>
+                        <td>@c.FirstName @c.LastName</td>
+                        <td>@c.Age()</td>
+                        <td>@c.ChefsDishes.Count</td>
                     </tr>
                 }
             }

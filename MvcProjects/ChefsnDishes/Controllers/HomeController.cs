@@ -84,7 +84,7 @@ public class HomeController : Controller
         }
         else {
             Console.WriteLine("newDish is invalid");
-            return View("AddDish");
+            return AddDish();
         }
     }
 
