@@ -19,21 +19,6 @@ namespace ProductsAndCategories.Migrations
                 .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.Property<int>("CategoriesProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoriesProductId", "ProductsProductId");
-
-                    b.HasIndex("ProductsProductId");
-
-                    b.ToTable("CategoryProduct");
-                });
-
             modelBuilder.Entity("ProductsAndCategories.Models.Association", b =>
                 {
                     b.Property<int>("AssociationId")
@@ -57,7 +42,7 @@ namespace ProductsAndCategories.Migrations
 
             modelBuilder.Entity("ProductsAndCategories.Models.Category", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("CategorytId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -71,7 +56,7 @@ namespace ProductsAndCategories.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("CategorytId");
 
                     b.ToTable("Categories");
                 });
@@ -104,31 +89,16 @@ namespace ProductsAndCategories.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.HasOne("ProductsAndCategories.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProductsAndCategories.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("ProductsAndCategories.Models.Association", b =>
                 {
                     b.HasOne("ProductsAndCategories.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("ProductAssociations")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ProductsAndCategories.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("CategoryAssociations")
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -136,6 +106,16 @@ namespace ProductsAndCategories.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ProductsAndCategories.Models.Category", b =>
+                {
+                    b.Navigation("ProductAssociations");
+                });
+
+            modelBuilder.Entity("ProductsAndCategories.Models.Product", b =>
+                {
+                    b.Navigation("CategoryAssociations");
                 });
 #pragma warning restore 612, 618
         }

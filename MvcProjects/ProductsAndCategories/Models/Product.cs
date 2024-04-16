@@ -14,7 +14,7 @@ public class Product
 
     public string Description {get; set;}
 
-    public List<Category> Categories {get; set;} = new List<Category>();
+    public List<Association> CategoryAssociations {get; set;} = new List<Association>();
 
     public DateTime CreatedAt {get; set;} = DateTime.Now;
     public DateTime UpdatedAt {get; set;} = DateTime.Now;

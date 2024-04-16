@@ -13,7 +13,7 @@ public class Dish
     public string Name {get; set;}
 
     [Required(ErrorMessage = "put something here plz")]
-    [MinLength(1, ErrorMessage = "must be longer than 1")]
+    [Range(1, int.MaxValue, ErrorMessage = "must be longer than 1")]
     public int Calories {get; set;}
 
     [Required(ErrorMessage = "put something here plz")]

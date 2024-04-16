@@ -19,11 +19,12 @@
 
         <div class="right-main2">
             <h2>Add Category</h2>
-            <form asp-action="">
-                <select asp-for="Categories">
+            <form asp-action="NewAssociation" method="post">
+                <input type="hidden" name="ProdId" value="@Model.ProductId">
+                <select name="CategoryId">
                     @{
                         foreach(Category c in ViewBag.allCategories) {
-                            <option value="">@c.Name</option>
+                            <option value="@c.CategorytId">@c.Name</option>
                         }
                     }
                 </select>

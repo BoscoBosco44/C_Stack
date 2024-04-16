@@ -11,7 +11,7 @@ using ProductsAndCategories;
 namespace ProductsAndCategories.Migrations
 {
     [DbContext(typeof(OneContext))]
-    [Migration("20240416022427_FirstMigration")]
+    [Migration("20240416212808_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,21 +20,6 @@ namespace ProductsAndCategories.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.Property<int>("CategoriesProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoriesProductId", "ProductsProductId");
-
-                    b.HasIndex("ProductsProductId");
-
-                    b.ToTable("CategoryProduct");
-                });
 
             modelBuilder.Entity("ProductsAndCategories.Models.Association", b =>
                 {
@@ -59,16 +44,12 @@ namespace ProductsAndCategories.Migrations
 
             modelBuilder.Entity("ProductsAndCategories.Models.Category", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("CategorytId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -77,7 +58,7 @@ namespace ProductsAndCategories.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("CategorytId");
 
                     b.ToTable("Categories");
                 });
@@ -99,6 +80,9 @@ namespace ProductsAndCategories.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<double>("Price")
+                        .HasColumnType("double");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
@@ -107,31 +91,16 @@ namespace ProductsAndCategories.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.HasOne("ProductsAndCategories.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProductsAndCategories.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("ProductsAndCategories.Models.Association", b =>
                 {
                     b.HasOne("ProductsAndCategories.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("ProductAssociations")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ProductsAndCategories.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("CategoryAssociations")
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -139,6 +108,16 @@ namespace ProductsAndCategories.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ProductsAndCategories.Models.Category", b =>
+                {
+                    b.Navigation("ProductAssociations");
+                });
+
+            modelBuilder.Entity("ProductsAndCategories.Models.Product", b =>
+                {
+                    b.Navigation("CategoryAssociations");
                 });
 #pragma warning restore 612, 618
         }
