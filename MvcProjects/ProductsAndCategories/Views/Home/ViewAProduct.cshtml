@@ -1,0 +1,37 @@
+@model Product
+
+
+<div class="text-center">
+    <h1>@ViewBag.thisProduct.Name</h1>
+
+    <div class="flex mg-2">
+
+        <div class="left-main2">
+            <h2>Categories</h2>
+            <ul>
+                @{
+                    foreach(Category c in ViewBag.thisProduct.Categories) {
+                        <li>@c.Name</li>
+                    }
+                }
+            </ul>
+        </div>
+
+        <div class="right-main2">
+            <h2>Add Category</h2>
+            <form asp-action="">
+                <select asp-for="Categories">
+                    @{
+                        foreach(Category c in ViewBag.allCategories) {
+                            <option value="">@c.Name</option>
+                        }
+                    }
+                </select>
+
+                <input type="submit" class="button19 mg-2" value="Add">
+
+            </form>
+        </div>
+    </div>
+
+</div>

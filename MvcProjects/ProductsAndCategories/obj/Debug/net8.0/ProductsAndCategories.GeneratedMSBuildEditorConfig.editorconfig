@@ -18,12 +18,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\peter\OneDrive\Desktop\CodingDojo\C#_Stack\MvcProjects\ProductsAndCategories
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/ViewACategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3QUNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/ViewAProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3QVByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/_CategoryForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQ2F0ZWdvcnlGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/_CategoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/_ProductForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfUHJvZHVjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Home/_ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfUHJvZHVjdExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/peter/OneDrive/Desktop/CodingDojo/C\#_Stack/MvcProjects/ProductsAndCategories/Views/Shared/Error.cshtml]

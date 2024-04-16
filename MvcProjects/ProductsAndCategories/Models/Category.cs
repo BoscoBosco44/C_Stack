@@ -7,11 +7,9 @@ namespace ProductsAndCategories.Models;
 public class Category
 {
     [Key]
-    public int ProductId {get; set;}
+    public int CategorytId {get; set;}
 
     public string Name {get; set;}
-
-    public string Description {get; set;}
 
     public List<Product> Products {get; set;} = new List<Product>();
 

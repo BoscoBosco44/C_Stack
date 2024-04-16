@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="flex">
+    <div class="left-main2">
+        <h1>New Category</h1>
+        @await Html.PartialAsync("_CategoryForm", new Category())
+
+
+
+    </div>
+
+    <div class="line-v"></div>
+
+    <div class="right-main2">
+        @await Html.PartialAsync("_CategoryList")
+
+    </div>
+</div>

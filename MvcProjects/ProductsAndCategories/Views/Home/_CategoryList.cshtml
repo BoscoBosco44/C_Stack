@@ -1,0 +1,16 @@
+@model List<Category>
+
+
+<h1>All Categories</h1>
+<div mg-2>
+    <ul>
+        @{
+            foreach(Category c in Model) {
+                <li><a asp-action="">@c.Name</a></li>
+            }
+            //foreach make an li
+        }
+
+
+    </ul>
+</div>

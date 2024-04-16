@@ -16,6 +16,7 @@ public class Chef
     public string LastName {get; set;}
 
     [Required(ErrorMessage = "put something here plz")]
+    [AgeCheck]
     public DateTime DOB {get; set;}
 
     //nav prop
@@ -31,6 +32,23 @@ public class Chef
         TimeSpan age = DateTime.Now - DOB;
         return age.Days/365;
     }
+
+
+    public class AgeCheckAttribute : ValidationAttribute
+    {
+        
+        protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
+        { //must be 18 years or older
+            if (DateTime.Now < ((DateTime)value!))
+            {
+                return new ValidationResult("Please enter a day in the past");
+            } else {
+                return ValidationResult.Success;
+            }
+        }
+    }
+
+
 
 
 }
