@@ -65,9 +65,10 @@ public class HomeController : Controller
     [HttpGet("product/{ProdId}")]
     public IActionResult ShowProduct(int ProdId)
     {
-        //this versiont is putting thisProduct into the url
-        Product? thisProduct = _context.Products.Include(c => c.CategoryAssociations).SingleOrDefault(p => p.ProductId == ProdId);
-        ViewBag.allCategories = _context.Categories.ToList();
+        Product? thisProduct = _context.Products.Include(p => p.CategoryAssociations).ThenInclude(a => a.Category).SingleOrDefault(p => p.ProductId == ProdId);
+        
+                                //get all categories, include prodcutAssociations, return where(prodId != prodAsso)
+        ViewBag.allCategories = _context.Categories.Include(c => c.ProductAssociations).Where(c => !c.ProductAssociations.Any(a => a.ProductID == ProdId));
         return View("ViewAProduct", thisProduct);
 
 
@@ -78,13 +79,13 @@ public class HomeController : Controller
 
 
 //----------------
-    [HttpPost("association/new")]   //is this still restfull routing???
+    [HttpPost("association/new")]   
     public IActionResult NewAssociation(int ProdId, int CategoryId)
     {
 
         _context.Associations.Add(new Association(){ProductID = ProdId, CategoryId = CategoryId});
         _context.SaveChanges();
-        return View();
+        return RedirectToAction("Products");
     }
 
 

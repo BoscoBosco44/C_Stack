@@ -2,7 +2,7 @@
 
 
 <div class="text-center">
-    <h1>@ViewBag.thisProduct.Name</h1>
+    <h1>@Model.Name</h1>
 
     <div class="flex mg-2">
 
@@ -10,8 +10,8 @@
             <h2>Categories</h2>
             <ul>
                 @{
-                    foreach(Category c in ViewBag.thisProduct.Categories) {
-                        <li>@c.Name</li>
+                    foreach(Association c in Model.CategoryAssociations) {
+                        <li>@c.Category.Name</li>
                     }
                 }
             </ul>
