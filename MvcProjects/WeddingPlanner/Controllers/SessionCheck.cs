@@ -11,6 +11,7 @@ public class SessionCheckAttribute : ActionFilterAttribute
     {
         // Find the session, but remember it may be null so we need int?
         int? userId = context.HttpContext.Session.GetInt32("UserId");
+        Console.WriteLine("UserId in Session: ", userId);
         // Check to see if we got back null
         if(userId == null)
         {

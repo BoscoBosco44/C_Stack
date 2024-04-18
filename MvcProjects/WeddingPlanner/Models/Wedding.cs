@@ -25,7 +25,7 @@ public class Wedding
 
 
     //forgin key
-    public int UserId {get; set;}
+    public int? UserId {get; set;}
 
     //nav props
     public User? PlannerUser {get; set;}

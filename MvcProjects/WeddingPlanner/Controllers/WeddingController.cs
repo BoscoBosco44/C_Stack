@@ -38,16 +38,26 @@ public class WeddingController : Controller
 
 //------------------------------- CRUD routes ------------------------------------
 
-    [HttpPost("wedding/create")]
-    public IActionResult CreateWedding(Wedding newWedding)
+    [HttpPost("wedding/create")]     public IActionResult CreateWedding(Wedding newWedding)
     {
         if(ModelState.IsValid) {
+            Console.WriteLine("Wedding Model is valid");
+            Console.WriteLine("Wedding Model is valid");
+            newWedding.UserId = HttpContext.Session.GetInt32("UserId");
             _context.Add(newWedding);
             _context.SaveChanges();
 
             return RedirectToAction("Dashboard");
         }
         else {
+            Console.WriteLine("Wedding Model is NOT valid");
+            Console.WriteLine(ModelState);
+            Console.WriteLine(newWedding.WedderOne);
+            Console.WriteLine(newWedding.WedderTwo);
+            Console.WriteLine(newWedding.Date);
+            Console.WriteLine(newWedding.Address);
+            Console.WriteLine(newWedding.UserId);
+
             return View("NewWedding");
         }
     }
