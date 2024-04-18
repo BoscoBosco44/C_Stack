@@ -1,0 +1,37 @@
+@model Wedding
+
+
+<div class="mg-2">
+    <h1>Plan a Wedding</h1>
+
+    <form asp-action="CreateWedding" asp-controller="Wedding" method="post" class="formBox mg-2">
+
+        <div class="justify-context-space-between">
+            <label asp-for="WedderOne">Wedder One</label>
+            <input asp-for="WedderOne">
+            <span asp-validation-for="WedderOne"></span>
+        </div>
+
+        <div class="justify-context-space-between">
+            <label asp-for="WedderTwo">Wedder Two</label>
+            <input asp-for="WedderTwo">
+            <span asp-validation-for="WedderTwo"></span>
+        </div>
+
+        <div class="justify-context-space-between">
+            <label asp-for="WedderOne">Wedder One</label>
+            <input type="date" asp-for="WedderOne">
+            <span asp-validation-for="WedderOne"></span>
+        </div>
+
+        <div class="justify-context-space-between">
+            <label asp-for="Address">Address</label>
+            <input asp-for="Address">
+            <span asp-validation-for="Address"></span>
+        </div>
+
+        <input type="submit" class="button-19 mg-2" value="Create">
+
+    </form>
+
+</div>

@@ -1,0 +1,31 @@
+
+
+
+
+<div class="mg-top-2">
+    <table>
+        <tr>
+            <th>Wedding of</th>
+            <th>Date</th>
+            <th>Guest Count</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Name & Name</td>
+            <td>date</td>
+            <td>##</td>
+            <td>doThing</td>
+        </tr>
+        @{
+            foreach(Wedding w in Model){
+                <tr>
+                    <td>@w.WedderOne & @w.WedderTwo</td>
+                    <td>@w.Date</td>
+                    <td>##</td>
+                    <td>dothing</td>
+                </tr>
+            }
+        }
+        
+    </table>
+</div>
