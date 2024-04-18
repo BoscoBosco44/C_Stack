@@ -71,7 +71,7 @@ public class WeddingController : Controller
         }
     }
 
-    [HttpPost("wedding/{WeddingId}/delete")]
+    [HttpPost("wedding/delete")]
     public IActionResult DeleteWedding(int WeddingId) 
     {
         Wedding toDelete = _context.Weddings.SingleOrDefault(w => w.WeddingId == WeddingId);

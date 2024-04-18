@@ -65,7 +65,7 @@ public class UserController : Controller
 
 //---------------
 
-    [HttpPost("users/success")]
+    [HttpPost("users/success")] //for logging in
     public IActionResult LoginUser(LogUser user)
     {
         if(ModelState.IsValid) {
@@ -85,7 +85,7 @@ public class UserController : Controller
             var result = hasher.VerifyHashedPassword(user, userInDb.Password, user.LogPassword); //why var?
 
             if(result == 0) {
-                ModelState.AddModelError("Email", "Lies Lies Lies");
+                ModelState.AddModelError("Email", "Lies Lies Lies (Incorect email/password)");
                 return View("Index");
             }
             else {
@@ -93,7 +93,7 @@ public class UserController : Controller
                 HttpContext.Session.SetString("Username", userInDb.FirstName); //set user name in session
 
                 int? userId = HttpContext.Session.GetInt32("UserId");
-                Console.WriteLine("UserId in session (from user controller): {userId}");
+                Console.WriteLine($"UserId in session (from user controller): {userId}");
 
                 return RedirectToAction("Dashboard", "Wedding");
             }
