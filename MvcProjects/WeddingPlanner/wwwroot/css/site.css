@@ -349,7 +349,10 @@ tr:nth-child(even) {
 }
 
 
-
+.aBox {
+  border: solid black 2px;
+  width: 15em;
+}
 
 /* --------------------------- */
 

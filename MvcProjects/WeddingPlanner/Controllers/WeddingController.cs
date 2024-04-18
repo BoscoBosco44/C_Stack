@@ -23,8 +23,8 @@ public class WeddingController : Controller
     [HttpGet("dashboard")]
     public IActionResult Dashboard()
     {
-    //     List<Wedding> allWeddings = _context.Weddings.Include(w => w.RsvpedGuests).ThenInclude(a => a.RsvpingUser).Where(w => w.)
-        List<Wedding> allWeddings = _context.Weddings.ToList();
+        List<Wedding> allWeddings = _context.Weddings.Include(w => w.RsvpedGuests).ToList();
+        // List<Wedding> allWeddings = _context.Weddings.ToList();
         return View("Dashboard", allWeddings);
     }
 
@@ -33,6 +33,14 @@ public class WeddingController : Controller
     public IActionResult NewWedding()
     {
         return View("NewWedding");
+    }
+
+    [HttpGet("wedding/{WeddingId}/view")]
+    public IActionResult ViewOneWedding(int WeddingId)
+    {
+        Wedding? thisWedding = _context.Weddings.Include(w => w.RsvpedGuests).ThenInclude(g => g.RsvpingUser).SingleOrDefault(w => w.WeddingId == WeddingId);
+        ViewBag.SessionUserId = HttpContext.Session.GetInt32("UserId");
+        return View("ViewOneWedding", thisWedding);
     }
 
 
@@ -60,6 +68,34 @@ public class WeddingController : Controller
 
             return View("NewWedding");
         }
+    }
+
+
+
+//--------------- CRUD for RSVP
+
+    [HttpPost("rsvp/update")]
+    public IActionResult AddRSVP(int WeddingId)
+    {
+        RSVP newRsvp = new(){WeddingId = WeddingId, UserId = (int)HttpContext.Session.GetInt32("UserId")};
+
+        _context.Add(newRsvp);
+        _context.SaveChanges();
+
+        return Dashboard();
+        // return View("Dashboard");
+    }
+
+    [HttpPost("rsvp/delete")]
+    public IActionResult DeleteRsvp(int WeddingId)
+    {
+        RSVP toDelete = _context.RSVPs.SingleOrDefault(r => r.WeddingId == WeddingId && r.UserId == (int)HttpContext.Session.GetInt32("UserId"));
+        if(toDelete == null)
+            {Console.WriteLine("Wedding toDelete returned null");} //this is pointless / cant be null
+        _context.RSVPs.Remove(toDelete);
+        _context.SaveChanges();
+
+        return Dashboard();
     }
 
 

@@ -29,5 +29,5 @@ public class Wedding
 
     //nav props
     public User? PlannerUser {get; set;}
-    public List<RSVP> RsvpedGuests {get; set;}
+    public List<RSVP> RsvpedGuests {get; set;} = [];
 }

@@ -71,10 +71,9 @@ public class UserController : Controller
         if(ModelState.IsValid) {
             Console.WriteLine("Login user valid");
 
-            User? userInDb = _context.Users.SingleOrDefault(i => i.Email == user.LogEmail);
+            User? userInDb = _context.Users.SingleOrDefault(u => u.Email == user.LogEmail);
 
-            Console.WriteLine(userInDb.UserId);
-            Console.WriteLine(userInDb.FirstName);
+            Console.WriteLine($"UserId from DB {userInDb.UserId}");
 
             if(userInDb == null) {
                 ModelState.AddModelError("Email", "Invalid Email / Passwordddddd");
@@ -92,6 +91,10 @@ public class UserController : Controller
             else {
                 HttpContext.Session.SetInt32("UserId", userInDb.UserId); //set UserId in session
                 HttpContext.Session.SetString("Username", userInDb.FirstName); //set user name in session
+
+                int? userId = HttpContext.Session.GetInt32("UserId");
+                Console.WriteLine("UserId in session (from user controller): {userId}");
+
                 return RedirectToAction("Dashboard", "Wedding");
             }
 
