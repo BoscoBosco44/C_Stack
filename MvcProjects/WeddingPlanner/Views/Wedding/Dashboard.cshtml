@@ -27,7 +27,8 @@
                     <td>
                         @{
                             if(w.UserId == Context.Session.GetInt32("UserId")) {
-                                <form asp-action="">
+                                <form asp-action="DeleteWedding" asp-controller="Wedding" method="post">
+                                    <input type="hidden" name="WeddingId" value="@w.WeddingId">
                                     <button type="submit" class="btn-primary">Delete</button>
                                 </form>
                             }

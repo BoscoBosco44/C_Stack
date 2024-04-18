@@ -46,7 +46,8 @@ public class WeddingController : Controller
 
 //------------------------------- CRUD routes ------------------------------------
 
-    [HttpPost("wedding/create")]     public IActionResult CreateWedding(Wedding newWedding)
+    [HttpPost("wedding/create")]     
+    public IActionResult CreateWedding(Wedding newWedding)
     {
         if(ModelState.IsValid) {
             Console.WriteLine("Wedding Model is valid");
@@ -68,6 +69,16 @@ public class WeddingController : Controller
 
             return View("NewWedding");
         }
+    }
+
+    [HttpPost("wedding/{WeddingId}/delete")]
+    public IActionResult DeleteWedding(int WeddingId) 
+    {
+        Wedding toDelete = _context.Weddings.SingleOrDefault(w => w.WeddingId == WeddingId);
+        _context.Weddings.Remove(toDelete);
+        _context.SaveChanges();
+
+        return Dashboard();
     }
 
 
