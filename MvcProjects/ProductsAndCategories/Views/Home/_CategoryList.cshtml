@@ -6,7 +6,9 @@
     <ul>
         @{
             foreach(Category c in Model) {
-                <li><a asp-action="">@c.Name</a></li>
+                <li><a asp-action="ShowCategory" asp-route-catID="@c.CategorytId">@c.Name</a></li>
+                @* <li><a asp-action="ShowProduct" asp-route-ProdId="@p.ProductId"> @p.Name</a></li> *@
+
             }
             //foreach make an li
         }

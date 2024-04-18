@@ -71,10 +71,16 @@ public class HomeController : Controller
         ViewBag.allCategories = _context.Categories.Include(c => c.ProductAssociations).Where(c => !c.ProductAssociations.Any(a => a.ProductID == ProdId));
         return View("ViewAProduct", thisProduct);
 
+    }
 
-        // ViewBag.thisProduct = _context.Products.Include(c => c.Categories).SingleOrDefault(p => p.ProductId == ProdId);
-        // ViewBag.allCategories = _context.Categories.ToList();
-        // return View("ViewAProduct");
+    [HttpGet("category/{catID}")]
+    public IActionResult ShowCategory(int catID)
+    {
+        Category? thisCategory = _context.Categories.Include(c => c.ProductAssociations).ThenInclude(a => a.Product).SingleOrDefault(c => c.CategorytId == catID);
+        ViewBag.ProductsToAdd = _context.Products.Include(p => p.CategoryAssociations).Where(p => !p.CategoryAssociations.Any(a => a.CategoryId == catID));
+
+        return View("ViewACategory", thisCategory);
+    
     }
 
 
