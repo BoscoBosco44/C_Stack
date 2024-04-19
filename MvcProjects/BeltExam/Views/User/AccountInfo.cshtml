@@ -1,0 +1,23 @@
+@model User
+
+<h1 class="mg-2">Account Information</h1>
+
+<div>
+    <h3>Username: @Model.Username</h3>
+    <h3>Email: @Model.Email</h3>
+</div>
+
+<div>
+    <h4>Coupons posted: @Model.CouponsCreated.Count</h4>
+    <h4># of coupons you used: @Model.CouponInteractions.Count()</h4>
+    <div class="flex">
+        <h4># of times your coupons were used: @{
+            int sum = 0;
+            foreach(Coupon c in @Model.CouponsCreated) {
+                sum += c.UsersWhoUsedThisCoupon.Count;
+            }
+            <h4>@sum</h4>
+            }
+        </h4>
+    </div>
+</div>

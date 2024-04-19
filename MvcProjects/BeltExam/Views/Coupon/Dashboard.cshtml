@@ -1,0 +1,43 @@
+
+
+<h1>Welcome, @Context.Session.GetString("Username")</h1>
+
+<div class="mg-2">
+    search bar partical gose here | button | button 2
+</div>
+
+<div class="mg-2 displayAllCoupons">
+    @{
+        foreach(Coupon c in Model) {
+            <div class="text-center CouponBox">
+                <h2>@c.CouponCode</h2>
+                <h4>Use On: @c.ApplicableWebsite</h4>
+                <h4>@c.Description</h4>
+
+                <p>@c.UsersWhoUsedThisCoupon.Count people have used this</p>
+
+                @{
+                    if(c.UserId == Context.Session.GetInt32("UserId")) {
+                        <p>You posted this!</p>
+                    }
+                    else {
+                        if(c.UsersWhoUsedThisCoupon.Any(u => u.UserId == Context.Session.GetInt32("UserId"))) {
+                            <p>You have used this coupon</p>
+                        }
+                        else {
+                            <form asp-action="AddCouponRelation" asp-controller="Coupon">
+                                <input type="hidden" name="CouponId" value="@c.CouponId">
+                                <button class="btn btn-primary">Use Coupon</button>
+                            </form>
+                        }
+
+
+                    }
+                }
+
+                <p>Posted by: @c.CouponCreator.Username</p>
+
+            </div>
+        }
+    }
+</div>

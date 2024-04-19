@@ -1,0 +1,35 @@
+@model Coupon
+
+
+
+
+<div>
+    <h1>Add a Coupon</h1>
+
+        <form asp-action="CreateCoupon" asp-controller="Coupon" method="post" class="formBox mg-2">
+            <div class="justify-context-space-between">
+                <label asp-for="CouponCode">CouponCode</label>
+                <input asp-for="CouponCode">
+                <span asp-validation-for="CouponCode"></span>
+            </div>
+
+            <div class="justify-context-space-between">
+                <label asp-for="ApplicableWebsite">Applicable Website</label>
+                <input asp-for="ApplicableWebsite">
+                <span asp-validation-for="ApplicableWebsite"></span>
+            </div>
+
+            <div class="justify-context-space-between">
+                <label asp-for="Description">Description</label>
+                <input type="text" asp-for="Description">
+                <span asp-validation-for="Description"></span>
+            </div>
+
+            <input type="submit" class="button-19 mg-2" value="Create">
+
+
+        </form>
+
+
+
+</div>

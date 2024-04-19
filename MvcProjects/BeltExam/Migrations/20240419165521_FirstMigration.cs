@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WeddingPlanner.Migrations
+namespace BeltExam.Migrations
 {
     public partial class FirstMigration : Migration
     {
@@ -19,9 +19,7 @@ namespace WeddingPlanner.Migrations
                 {
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FirstName = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    LastName = table.Column<string>(type: "longtext", nullable: false)
+                    Username = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -37,86 +35,84 @@ namespace WeddingPlanner.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Weddings",
+                name: "Coupons",
                 columns: table => new
                 {
-                    WeddingId = table.Column<int>(type: "int", nullable: false)
+                    CouponId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    WedderOne = table.Column<string>(type: "longtext", nullable: false)
+                    CouponCode = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    WedderTwo = table.Column<string>(type: "longtext", nullable: false)
+                    ApplicableWebsite = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Date = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    Address = table.Column<string>(type: "longtext", nullable: false)
+                    Description = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Weddings", x => x.WeddingId);
+                    table.PrimaryKey("PK_Coupons", x => x.CouponId);
                     table.ForeignKey(
-                        name: "FK_Weddings_Users_UserId",
+                        name: "FK_Coupons_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "RSVPs",
+                name: "sharedCoupons",
                 columns: table => new
                 {
-                    RsvpId = table.Column<int>(type: "int", nullable: false)
+                    SharedCouponId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    WeddingId = table.Column<int>(type: "int", nullable: false)
+                    CouponId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RSVPs", x => x.RsvpId);
+                    table.PrimaryKey("PK_sharedCoupons", x => x.SharedCouponId);
                     table.ForeignKey(
-                        name: "FK_RSVPs_Users_UserId",
+                        name: "FK_sharedCoupons_Coupons_CouponId",
+                        column: x => x.CouponId,
+                        principalTable: "Coupons",
+                        principalColumn: "CouponId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_sharedCoupons_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RSVPs_Weddings_WeddingId",
-                        column: x => x.WeddingId,
-                        principalTable: "Weddings",
-                        principalColumn: "WeddingId",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RSVPs_UserId",
-                table: "RSVPs",
+                name: "IX_Coupons_UserId",
+                table: "Coupons",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RSVPs_WeddingId",
-                table: "RSVPs",
-                column: "WeddingId");
+                name: "IX_sharedCoupons_CouponId",
+                table: "sharedCoupons",
+                column: "CouponId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Weddings_UserId",
-                table: "Weddings",
+                name: "IX_sharedCoupons_UserId",
+                table: "sharedCoupons",
                 column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "RSVPs");
+                name: "sharedCoupons");
 
             migrationBuilder.DropTable(
-                name: "Weddings");
+                name: "Coupons");
 
             migrationBuilder.DropTable(
                 name: "Users");

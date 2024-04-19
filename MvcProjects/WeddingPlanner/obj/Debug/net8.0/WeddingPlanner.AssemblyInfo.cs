@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeddingPlanner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b0208234bae7b9338e07cee62237b186cbdb8c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66b2d4b400f4a8afa9028244a3ab5a04046dfc24")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeddingPlanner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeddingPlanner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
