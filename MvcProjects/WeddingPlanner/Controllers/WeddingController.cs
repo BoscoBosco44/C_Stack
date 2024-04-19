@@ -39,7 +39,6 @@ public class WeddingController : Controller
     public IActionResult ViewOneWedding(int WeddingId)
     {
         Wedding? thisWedding = _context.Weddings.Include(w => w.RsvpedGuests).ThenInclude(g => g.RsvpingUser).SingleOrDefault(w => w.WeddingId == WeddingId);
-        ViewBag.SessionUserId = HttpContext.Session.GetInt32("UserId");
         return View("ViewOneWedding", thisWedding);
     }
 

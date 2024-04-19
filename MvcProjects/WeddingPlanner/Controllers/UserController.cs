@@ -44,6 +44,8 @@ public class UserController : Controller
             _context.SaveChanges();
             
             HttpContext.Session.SetInt32("UserId", newUser.UserId); //"loggin in" users
+            HttpContext.Session.SetString("Username", newUser.FirstName); //set user name in session
+
 
             return RedirectToAction("Success");
         }
@@ -73,10 +75,10 @@ public class UserController : Controller
 
             User? userInDb = _context.Users.SingleOrDefault(u => u.Email == user.LogEmail);
 
-            Console.WriteLine($"UserId from DB {userInDb.UserId}");
+            // Console.WriteLine($"UserId from DB {userInDb.UserId}"); //this breaks everything if email dose not exist
 
             if(userInDb == null) {
-                ModelState.AddModelError("Email", "Invalid Email / Passwordddddd");
+                ModelState.AddModelError("LogPassword", "Invalid Email / Password");
                 return View("Index");
             }
 
@@ -85,7 +87,7 @@ public class UserController : Controller
             var result = hasher.VerifyHashedPassword(user, userInDb.Password, user.LogPassword); //why var?
 
             if(result == 0) {
-                ModelState.AddModelError("Email", "Lies Lies Lies (Incorect email/password)");
+                ModelState.AddModelError("LogEmail", "Lies Lies Lies (Incorect email/password)");
                 return View("Index");
             }
             else {

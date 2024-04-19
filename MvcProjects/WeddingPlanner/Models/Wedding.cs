@@ -14,6 +14,7 @@ public class Wedding
     public string WedderTwo {get; set;}
 
     [DataType(DataType.Date)]
+    [FutureDateCheck]
     public DateTime Date {get; set;}
 
     public string Address {get; set;}
@@ -30,4 +31,25 @@ public class Wedding
     //nav props
     public User? PlannerUser {get; set;}
     public List<RSVP> RsvpedGuests {get; set;} = [];
+
+
+
+
+
+
+    //Custom Validatoin
+    public class FutureDateCheckAttribute : ValidationAttribute
+    {
+        
+        protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
+        { 
+            TimeSpan span = DateTime.Now - (DateTime)value;
+            if (DateTime.Now > (DateTime)value)
+            {
+                return new ValidationResult("Date must be in the future");
+            } else {
+                return ValidationResult.Success;
+            }
+        }
+    }
 }

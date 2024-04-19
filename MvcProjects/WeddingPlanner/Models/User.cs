@@ -20,7 +20,7 @@ public class User
     public string Email {get; set;}
 
     [DataType(DataType.Password)] //???
-    [MinLength(5, ErrorMessage ="Password must be at least 5 char")]
+    [MinLength(5, ErrorMessage ="Password must be at least 5 char")] //this would be 8 but it would break all my accounts 
     public string Password {get; set;}
 
     [NotMapped]

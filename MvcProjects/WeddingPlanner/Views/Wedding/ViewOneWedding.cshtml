@@ -9,7 +9,9 @@
     <div>
         <h3>Guests:</h3>
         <div class="aBox">
-            @{
+            @{ foreach(RSVP g in Model.RsvpedGuests) {
+                <p>@g.RsvpingUser.FirstName @g.RsvpingUser.LastName</p>
+                }
             }
         </div>
     </div>
