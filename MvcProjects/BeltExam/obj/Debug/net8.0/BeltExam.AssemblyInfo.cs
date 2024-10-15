@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeltExam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e92162b14203c2bde2ad5713cdf657baf6a2cab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c792b9b90ad849b92ae28306c444fca13cf36737")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeltExam")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeltExam")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
