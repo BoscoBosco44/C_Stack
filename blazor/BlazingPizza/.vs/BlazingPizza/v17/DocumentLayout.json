@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\blazor\\BlazingPizza\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DDDEA0B3-AA2C-4696-8FD9-6D7478FB7B44}|BlazingPizza\\BlazingPizza.csproj|c:\\users\\peter\\onedrive\\desktop\\codingdojo\\c#_stack\\blazor\\blazingpizza\\blazingpizza\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDDEA0B3-AA2C-4696-8FD9-6D7478FB7B44}|BlazingPizza\\BlazingPizza.csproj|solutionrelative:blazingpizza\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDDEA0B3-AA2C-4696-8FD9-6D7478FB7B44}|BlazingPizza\\BlazingPizza.csproj|c:\\users\\peter\\onedrive\\desktop\\codingdojo\\c#_stack\\blazor\\blazingpizza\\blazingpizza\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDDEA0B3-AA2C-4696-8FD9-6D7478FB7B44}|BlazingPizza\\BlazingPizza.csproj|solutionrelative:blazingpizza\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\blazor\\BlazingPizza\\BlazingPizza\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "BlazingPizza\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\blazor\\BlazingPizza\\BlazingPizza\\Components\\_Imports.razor",
+              "RelativeToolTip": "BlazingPizza\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T18:38:30.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\blazor\\BlazingPizza\\BlazingPizza\\_Imports.razor",
+              "RelativeDocumentMoniker": "BlazingPizza\\_Imports.razor",
+              "ToolTip": "C:\\Users\\peter\\OneDrive\\Desktop\\CodingDojo\\C#_Stack\\blazor\\BlazingPizza\\BlazingPizza\\_Imports.razor",
+              "RelativeToolTip": "BlazingPizza\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T18:38:22.505Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
